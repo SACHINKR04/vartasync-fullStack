@@ -59,7 +59,10 @@ app = FastAPI(
 # CORS — allow Next.js frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Lock down in production
+    allow_origins=[
+        "http://localhost:3000",
+        "https://vartasync-full-stack.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
